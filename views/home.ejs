@@ -1,0 +1,57 @@
+<%- include("partials/header") -%>
+<div class="container-fluid" id="cont1">
+  <h1 class="ml6">
+    <span class="text-wrapper">
+      <span class="letters">Coder's Guide</span>
+    </span>
+  </h1>
+  <div class="row">
+    <div class="col-md-6" style="text-align: center;">
+      <img src="/images/home1.jpg" alt="" style="width: 90%; height: auto;">
+    </div>
+    <div class="col-md-6" style="text-align: center;">
+      <div style="padding-top: 15%;">
+        <h1 style="font-size: min(6vw,2.5em); font-family: 'DM Sans', sans-serif;">Get to know about latest programming tips and tricks in coding.</h1>
+      </div>
+      <div style="padding-top: 10%; text-align: center; padding-bottom: 40px;">
+      <a href="/create" style="margin-right: 5%;"><button type="button" class="btn btn-success btn-lg" id="crbtn1">Create a blog</button></a>
+      <a href="/blogpage"><button type="button" class="btn btn-success btn-lg" id="crbtn2">Go To Blogs</button></a>
+    </div>
+    </div>
+    
+  </div>
+  <div class="row" style="text-align: center;  ">
+    <div class="col-md-4" style="text-align: center;  margin-bottom: 5%;">
+      <div class="card" style="width: min(90%,22rem); margin-left: auto; margin-right: auto;">
+        <img src="/images/coding1.jfif" class="card-img-top" alt="..." style="height:160px">
+        <div class="card-body">
+          
+          <p class="card-text">The aim is to provide tips and tricks to the programers who are just <span id="dots1">...</span><span id="more1">the beginners and how to save a lot of time and make fewer mistakes while coding.</span></p>
+          <a onclick="myFunction1()" id="myBtn1">Read more >></a>
+        </div>
+      </div>
+  </div>
+    <div class="col-md-4" style="text-align: center;  margin-bottom: 5%;">
+      <div class="card" style="width: min(90%,22rem); margin-left: auto; margin-right: auto;">
+        <img src="/images/coding2.jfif" class="card-img-top" alt="..." style="height: 160px;" id="oo"> 
+        <div class="card-body">
+          <p class="card-text">Individuals can just post some coding tricks and experience regarding<span id="dots2">...</span><span id="more2"> competitive coding, web dev, machine learning which they feel would be beneficial for the others.</span> </p>
+          <a onclick="myFunction2()" id="myBtn2">Read more >></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4" style="text-align: center;  margin-bottom: 5%;">
+      <div class="card" style="width: min(90%,22rem); margin-left: auto; margin-right: auto;">
+        <img src="/images/coding3.jpg" class="card-img-top" alt="..." style="height:160px">
+        <div class="card-body">
+          <p class="card-text">Users can just post the blog or can see the posts after successful<span id="dots">...</span><span id="more"> authentication.</span></p>
+        <a onclick="myFunction()" id="myBtn">Read more >></a>
+        </div>
+      </div>
+  </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+<%- include("partials/footer") -%>

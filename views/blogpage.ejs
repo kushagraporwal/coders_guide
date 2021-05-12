@@ -1,0 +1,52 @@
+<%- include("partials/header") -%>
+<style>
+  body {
+    background-color: white;
+  }
+</style>
+<h1 class="tips">
+  <span class="text-wrapper">
+    <span class="letters">Tips And Tricks</span>
+  </span></h1>
+<div class="row" id="top">
+  <div class="col-6" style="text-align: center;">
+<p class="nameid">Hi  <%= name%>!</p>
+</div>
+<div class="col-6" style="text-align: center; ">
+  <a href="/create"><button class="btn green" id="crbtn">
+    <i class="material-icons" style="font-size: min(8vw,2.5em); float: left; color: #373937;">add_circle_outline</i>
+  <span style="margin-bottom: 0px; font-size: min(4vw,1.3em); line-height: 2; display: inline; vertical-align: middle; color: #373937; "> Add a Post</span>
+</button>
+</a>
+</div>
+</div>
+<div class="container" id="blogcont">
+<% for(var i=(blogs.length)-1; i>=0; i--) { %>
+<div class="blog">
+    <p class="name"><%= blogs[i].name %></p>
+  <p class="mid"> <%= blogs[i].blog %></p>
+  <p class="date"><%= blogs[i].date %></p>
+</div>
+<% } %>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script>
+  var textWrapper = document.querySelector('.tips .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.tips .letter',
+    rotateY: [-90, 0],
+    duration: 2000,
+    delay: (el, i) => 45 * i
+  }).add({
+    targets: '.tips',
+    opacity: 0,
+    duration: 10000000000000,
+    easing: "easeOutExpo",
+    delay: 100000000
+  });
+</script>
+<%- include("partials/footer") -%>
+

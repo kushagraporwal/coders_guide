@@ -1,0 +1,30 @@
+<%- include("partials/header") -%>
+<%- include("partials/message") -%>
+<style>
+    body{
+        background: #E7EAE6 ;
+    }
+</style>
+<div class="container" id="login1">
+    <div style="height: 200px; background-image: url(/images/login1.jfif); background-size: cover;">
+
+    </div>
+    <div >
+    <h1 style="text-align: center; text-decoration: underline;">Login here</h1>
+    <form action="/login" method="POST" style="padding-right: 10%; padding-left: 10%;">
+        <div class="form-group" style="margin-top: 4%;">
+            
+            <input type="email" class="form-control" name="email" placeholder="Email" style="opacity: 0.6;">
+        </div>
+        <div class="form-group" style="margin-top: 4%;" >
+           
+            <input type="password" class="form-control" name="password" placeholder="Password" style="opacity: 0.6;">
+        </div>
+        <div style="text-align: center;">
+        <button type="submit" class="btn btn-dark" id="loginbt">Login</button>
+        </div>
+    </form>
+    <p style="margin-top: 6%; text-align: center;">Dont have an account? <a href="/register">Register</a></p>
+</div>
+</div>
+    <%- include("partials/footer") -%>

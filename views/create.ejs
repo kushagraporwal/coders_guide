@@ -1,0 +1,45 @@
+<%- include("partials/header") -%>
+<p class="nameid2">Hi <%= name%> !</p>
+<div class="container" id="crcont">
+<form action="/create" method="POST">
+    <div class="form-group" style="text-align: center; padding-left: 0px; padding-right: 0px;">
+        <h1 class="ml10">
+            <span class="text-wrapper">
+              <span class="letters">Text Your Post Here</span>
+            </span>
+          </h1>
+          
+          
+        <textarea id="post" name="newblog" rows="9" cols="45" >
+            </textarea>
+    </div>
+    <p class="date2">Date- <span id="date3">Hello</span></p>
+    <button type="submit" class="btn btn-dark" id="postbt">Post</button>
+</form>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script>
+  var now= new Date().toLocaleDateString();
+  //var now= date.getDate();
+  console.log(now);
+var da= document.getElementById('date3');
+da.innerHTML= now;
+ 
+    var textWrapper = document.querySelector('.ml10 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml10 .letter',
+    rotateY: [-90, 0],
+    duration: 1300,
+    delay: (el, i) => 45 * i
+  }).add({
+    targets: '.ml10',
+    opacity: 0,
+    duration: 100000000,
+    easing: "easeOutExpo",
+    delay: 1
+  });
+</script>
+<%- include("partials/footer") -%>
